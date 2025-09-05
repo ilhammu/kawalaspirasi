@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bijak Melawan - Edukasi Melawan Propaganda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brave-pink': '#FF3E6C',
+                        'green-hero': '#2ECC71',
+                        'light-text': '#F8F9FA',
+                        'dark-text': '#333333',
+                        'retro-bg': '#FFF5E0',
+                        'retro-border': '#4A403A'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.7s ease-out',
+                        'bounce-light': 'bounceLight 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        bounceLight: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-10px)' },
+                            '60%': { transform: 'translateY(-5px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF5E0;
+            color: #333333;
+        }
+
+        .retro-border {
+            border: 3px solid #4A403A;
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+
+        .retro-card {
+            border: 2px solid #4A403A;
+            box-shadow: 5px 5px 0px #4A403A;
+            transition: all 0.3s ease;
+        }
+
+        .retro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FF3E6C;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+
+        .animate-bounce-light {
+            animation: bounceLight 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-retro-bg">
+    <!-- Navbar -->
+    <nav class="bg-white retro-border fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-brave-pink flex items-center">
+                <i class="fas fa-brain mr-2"></i> BijakMengawal
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link text-dark-text font-medium">Beranda</a>
+                <a href="#edukasi" class="nav-link text-dark-text font-medium">Edukasi</a>
+                <a href="#contoh" class="nav-link text-dark-text font-medium">Contoh Konten</a>
+                <a href="#links" class="nav-link text-dark-text font-medium">Tautan</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://bijakmemantau.id/tuntutan-178"
+                    class="bg-brave-pink text-light-text px-4 py-2 rounded retro-border">Tuntutan 178</a>
+                <button class="md:hidden text-dark-text">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-green-hero retro-border-b">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-slide-up">
+                <h1 class="text-4xl md:text-5xl font-bold text-dark-text mb-6">Lawan Propaganda dengan <span
+                        class="text-brave-pink">Edukasi yang Tepat</span></h1>
+                <p class="text-lg text-dark-text mb-8">Belajar mengenali, menganalisis, dan melawan propaganda melalui
+                    konten edukasi yang mudah dipahami dan menarik.</p>
+                <div class="flex space-x-4">
+                    <a href="#edukasi"
+                        class="bg-brave-pink text-light-text px-6 py-3 rounded-lg retro-border font-medium hover:bg-opacity-90 transition">Mulai
+                        Belajar</a>
+                    <a href="#contoh"
+                        class="bg-white text-dark-text px-6 py-3 rounded-lg retro-border font-medium hover:bg-gray-100 transition">Lihat
+                        Contoh</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-fade-in">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-brave-pink rounded-full absolute -top-5 -left-5 opacity-20"></div>
+                    <div class="w-80 h-80 bg-green-500 rounded-full absolute -bottom-5 -right-5 opacity-20"></div>
+                    <img src="https://placehold.co/400x400/FF3E6C/FFFFFF?text=BijakMengawal" alt="Hero Image"
+                        class="relative z-10 rounded-full retro-border w-64 h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edukasi Section -->
+    <section id="edukasi" class="py-20 px-4 bg-retro-bg">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-4">Edukasi Melawan Propaganda</h2>
+            <p class="text-center text-dark-text mb-12 max-w-2xl mx-auto">Pahami teknik-teknik propaganda dan cara
+                melawannya dengan konten yang mudah dicerna.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in">
+                    <div class="w-14 h-14 bg-brave-pink rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-question-circle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">Apa Itu Propaganda?</h3>
+                    <p class="text-dark-text mb-4">Propaganda adalah upaya menyebarkan informasi untuk memengaruhi
+                        pandangan masyarakat dengan cara tidak objektif.</p>
+                    <a href="pages/propaganda.html" class="text-brave-pink font-medium flex items-center">
+                        Pelajari lebih lanjut
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-green-hero rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">Teknik Propaganda Umum</h3>
+                    <p class="text-dark-text mb-4">Pelajari 7 teknik propaganda paling umum seperti name calling,
+                        glittering generality, transfer, dan lainnya.</p>
+                    <a href="pages/7-cara-menghadapi-propaganda.html"
+                        class="text-brave-pink font-medium flex items-center">
+                        Pelajari lebih lanjut
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="w-14 h-14 bg-brave-pink rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">Cara Melawan Propaganda</h3>
+                    <p class="text-dark-text mb-4">Tingkatkan literasi media, verifikasi informasi, dan sebarkan konten
+                        edukasi untuk melawan propaganda.</p>
+                    <a href="pages/kontra-propaganda.html" class="text-brave-pink font-medium flex items-center">
+                        Pelajari lebih lanjut
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contoh Konten Section -->
+    <section id="contoh" class="py-20 px-4 bg-green-hero retro-border-t retro-border-b">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-4">Contoh Konten Media Sosial</h2>
+            <p class="text-center text-dark-text mb-12 max-w-2xl mx-auto">
+                Format konten yang efektif untuk melawan propaganda di platform media sosial.
+            </p>
+
+            <!-- Grid 3 Cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Instagram Post dengan Carousel -->
+                <div class="bg-white retro-card p-4 rounded-lg animate-slide-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-brave-pink rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text ml-3">Instagram Post</h3>
+                    </div>
+
+                    <!-- Carousel Swiper -->
+                    <div class="swiper instagram-swiper mb-4 rounded-lg overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <!-- 6 Gambar Carousel (Format Potrait: 9:16) -->
+                            <div class="swiper-slide">
+                                <div class="aspect-[4/5] bg-contain bg-no-repeat bg-center retro-border"
+                                    style="background-image: url('assets/images/Ini adalah tuntutan dari kami semua, rakyat Indonesia. Sudah dirangkum dan didetailkan 17 tuntut.jpg')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="aspect-[4/5] bg-contain bg-no-repeat bg-center retro-border"
+                                    style="background-image: url('assets/images/Ini adalah tuntutan dari kami semua, rakyat Indonesia. Sudah dirangkum dan didetailkan 17 tuntut(1).jpg')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="aspect-[4/5] bg-contain bg-no-repeat bg-center retro-border"
+                                    style="background-image: url('assets/images/Ini adalah tuntutan dari kami semua, rakyat Indonesia. Sudah dirangkum dan didetailkan 17 tuntut(2).jpg')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="aspect-[4/5] bg-contain bg-no-repeat bg-center retro-border"
+                                    style="background-image: url('assets/images/Ini adalah tuntutan dari kami semua, rakyat Indonesia. Sudah dirangkum dan didetailkan 17 tuntut(3).jpg')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="aspect-[4/5] bg-contain bg-no-repeat bg-center retro-border"
+                                    style="background-image: url('assets/images/Ini adalah tuntutan dari kami semua, rakyat Indonesia. Sudah dirangkum dan didetailkan 17 tuntut(4).jpg')">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="aspect-[4/5] bg-contain bg-no-repeat bg-center retro-border"
+                                    style="background-image: url('assets/images/Ini adalah tuntutan dari kami semua, rakyat Indonesia. Sudah dirangkum dan didetailkan 17 tuntut(5).jpg')">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <p class="text-dark-text mb-4">Gunakan gambar menarik dengan teks singkat yang menjelaskan teknik
+                        propaganda tertentu.</p>
+                    <ul class="text-dark-text list-disc pl-5">
+                        <li>Gunakan palet warna konsisten</li>
+                        <li>Tambahkan fakta singkat dan jelas</li>
+                        <li>Gunakan hashtag relevan</li>
+                    </ul>
+                </div>
+
+                <!-- TikTok Video -->
+                <div class="bg-white retro-card p-4 rounded-lg animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-brave-pink rounded-full flex items-center justify-center">
+                            <i class="fab fa-tiktok text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text ml-3">TikTok Video</h3>
+                    </div>
+
+                    <!-- Video TikTok (Potrait 9:16) -->
+                    <div class="aspect-[9/16] mx-auto rounded-lg overflow-hidden shadow-lg mb-4">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="assets/videos/Heading.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <p class="text-dark-text mb-4">Buat video pendek 15-60 detik yang menunjukkan contoh propaganda dan
+                        cara melawannya.</p>
+                    <ul class="text-dark-text list-disc pl-5">
+                        <li>Gunakan tren audio yang populer</li>
+                        <li>Buat konten interaktif dengan teks overlay</li>
+                        <li>Ajukan pertanyaan untuk meningkatkan engagement</li>
+                    </ul>
+                </div>
+
+                <!-- Instagram Reels -->
+                <div class="bg-white retro-card p-4 rounded-lg animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-brave-pink rounded-full flex items-center justify-center">
+                            <i class="fas fa-film text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text ml-3">Instagram Reels</h3>
+                    </div>
+
+                    <!-- Video Reels (Potrait 9:16) -->
+                    <div class="aspect-[9/16] mx-auto rounded-lg overflow-hidden shadow-lg mb-4">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="assets/videos/178.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <p class="text-dark-text mb-4">Buat video vertikal singkat yang edukatif dengan grafik dan teks yang
+                        menarik.</p>
+                    <ul class="text-dark-text list-disc pl-5">
+                        <li>Gunakan transisi kreatif antar klip</li>
+                        <li>Tambahkan caption informatif</li>
+                        <li>Gunakan efek dan filter yang sesuai</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Links Section -->
+    <section id="links" class="py-20 px-4 bg-retro-bg">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-4">Tautan Penting</h2>
+            <p class="text-center text-dark-text mb-12 max-w-2xl mx-auto">Akses sumber daya tambahan untuk memperdalam
+                pengetahuan tentang melawan propaganda.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <a href="https://bijakmemantau.id/tuntutan-178" target="_blank"
+                    class="retro-card bg-white p-6 rounded-lg flex items-center group animate-bounce-light">
+                    <div class="w-16 h-16 bg-brave-pink rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-exclamation-circle text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-text mb-2 group-hover:text-brave-pink transition">
+                            Tuntutan 178</h3>
+                        <p class="text-dark-text">Pelajari tentang tuntutan 178 untuk melawan propaganda dan
+                            disinformasi.</p>
+                    </div>
+                </a>
+
+                <a href="https://brave-pink-hero-green.lovable.app/" target="_blank"
+                    class="retro-card bg-white p-6 rounded-lg flex items-center group animate-bounce-light"
+                    style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-green-hero rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-text mb-2 group-hover:text-brave-pink transition">Brave
+                            Pink Hero Green Photo</h3>
+                        <p class="text-dark-text">Ubah foto kamu jadi duotone Brave Pink Hero Green
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white retro-border-t py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-brave-pink flex items-center">
+                        <i class="fas fa-brain mr-2"></i> BijakMengawal
+                    </a>
+                    <p class="text-dark-text mt-2">Edukasi melawan propaganda untuk masyarakat Indonesia.</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-retro-border mt-8 pt-8 text-center text-dark-text">
+                <p>&copy; 2023 BijakMengawal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Swiper('.instagram-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 1,
+                spaceBetween: 0,
+            });
+        });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.retro-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
