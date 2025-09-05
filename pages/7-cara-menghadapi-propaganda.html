@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknik Propaganda Umum - Bijak Memantau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brave-pink': '#FF3E6C',
+                        'green-hero': '#2ECC71',
+                        'light-text': '#F8F9FA',
+                        'dark-text': '#333333',
+                        'retro-bg': '#FFF5E0',
+                        'retro-border': '#4A403A'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.7s ease-out',
+                        'bounce-light': 'bounceLight 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        bounceLight: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-10px)' },
+                            '60%': { transform: 'translateY(-5px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF5E0;
+            color: #333333;
+        }
+        .retro-border {
+            border: 3px solid #4A403A;
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+        .retro-card {
+            border: 2px solid #4A403A;
+            box-shadow: 5px 5px 0px #4A403A;
+            transition: all 0.3s ease;
+        }
+        .retro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FF3E6C;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+        .animate-bounce-light {
+            animation: bounceLight 2s infinite;
+        }
+        .propaganda-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #4A403A;
+            box-shadow: 4px 4px 0px #4A403A;
+        }
+    </style>
+</head>
+<body class="bg-retro-bg">
+    <!-- Navbar -->
+    <nav class="bg-white retro-border fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-brave-pink flex items-center">
+                <i class="fas fa-brain mr-2"></i> BijakMengawal
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html" class="nav-link text-dark-text font-medium">Beranda</a>
+                <a href="../index.html#jenis" class="nav-link text-dark-text font-medium">Jenis Propaganda</a>
+                <a href="../index.html#contoh" class="nav-link text-dark-text font-medium">Contoh</a>
+                <a href="../index.html#tips" class="nav-link text-dark-text font-medium">Tips Menangkal</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://bijakmengawal.id/tuntutan-178" class="bg-brave-pink text-light-text px-4 py-2 rounded retro-border">Tuntutan 178</a>
+                <button class="md:hidden text-dark-text">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 px-4 bg-green-hero retro-border-b">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark-text mb-6 animate-slide-up">7 Teknik Propaganda Umum</h1>
+            <p class="text-lg text-dark-text mb-8 max-w-3xl mx-auto animate-fade-in">Mengenal teknik propaganda adalah langkah pertama untuk melawannya. Pelajari 7 teknik paling umum yang sering digunakan dalam propaganda.</p>
+            <div class="animate-bounce-light mt-8">
+                <i class="fas fa-arrow-down text-3xl text-dark-text"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jenis Propaganda Section -->
+    <section id="jenis" class="py-16 px-4 bg-retro-bg">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-12">Jenis-Jenis Teknik Propaganda</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Card 1 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-brave-pink text-white text-2xl mr-4">
+                            1
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Name Calling</h3>
+                            <p class="text-sm text-gray-600">Memberi label negatif tanpa bukti</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Teknik ini menggunakan istilah atau label negatif untuk menggambarkan seseorang atau kelompok tanpa memberikan bukti yang mendukung.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"Para <span class="text-brave-pink font-bold">pengacau</span> itu ingin menghancurkan negara kita dengan ide-ide radikal mereka."</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.1s;">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-green-hero text-white text-2xl mr-4">
+                            2
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Glittering Generality</h3>
+                            <p class="text-sm text-gray-600">Kata-kata mulia tanpa penjelasan konkret</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Menggunakan kata-kata yang mulia dan positif tetapi tidak dijelaskan secara konkret, seperti "kebebasan", "keadilan", "perdamaian".</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"Dukung kami untuk <span class="text-green-hero font-bold">masa depan yang lebih cerah</span> dan <span class="text-green-hero font-bold">kemakmuran bersama</span>."</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-brave-pink text-white text-2xl mr-4">
+                            3
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Transfer</h3>
+                            <p class="text-sm text-gray-600">Mengaitkan dengan simbol berwibawa</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Mengaitkan sesuatu dengan simbol atau otoritas yang dihormati untuk membuatnya lebih dapat diterima, seperti bendera, agama, atau nilai-nilai nasional.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"Program kami didukung oleh <span class="text-brave-pink font-bold">nilai-nilai luhur bangsa</span> dan <span class="text-brave-pink font-bold">ajaran agama</span>."</p>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-green-hero text-white text-2xl mr-4">
+                            4
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Testimonial</h3>
+                            <p class="text-sm text-gray-600">Menggunakan dukungan figur terkenal</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Menggunakan pernyataan atau dukungan dari orang terkenal atau yang dihormati untuk mendukung suatu cause, produk, atau ide.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"<span class="text-green-hero font-bold">Artis terkenal</span> ini menggunakan produk kami setiap hari. Kalau Anda ingin seperti dia, gunakan produk kami juga!"</p>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-brave-pink text-white text-2xl mr-4">
+                            5
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Plain Folks</h3>
+                            <p class="text-sm text-gray-600">Menampilkan sebagai rakyat biasa</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Mencoba meyakinkan audiens bahwa pandangan tertentu mencerminkan nilai-nilai rakyat biasa dengan menampilkan figur sebagai orang biasa.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"Saya berasal dari <span class="text-brave-pink font-bold">keluarga sederhana</span> seperti Anda, jadi saya memahami kebutuhan rakyat kecil."</p>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-green-hero text-white text-2xl mr-4">
+                            6
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Card Stacking</h3>
+                            <p class="text-sm text-gray-600">Menonjolkan fakta tertentu, menyembunyikan lainnya</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Menyajikan informasi yang mendukung suatu posisi sementara mengabaikan atau menyembunyikan informasi yang bertentangan.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"Produk kami <span class="text-green-hero font-bold">terbukti meningkatkan hasil</span> sebesar 50% (tanpa menyebutkan bahwa ada efek sampingnya)."</p>
+                    </div>
+                </div>
+                
+                <!-- Card 7 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.6s;">
+                    <div class="flex items-start mb-4">
+                        <div class="propaganda-icon bg-brave-pink text-white text-2xl mr-4">
+                            7
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark-text">Bandwagon</h3>
+                            <p class="text-sm text-gray-600">Mengajak ikut mayoritas</p>
+                        </div>
+                    </div>
+                    <p class="text-dark-text mb-4">Meyakinkan orang untuk melakukan sesuatu karena "semua orang" melakukannya, menciptakan tekanan sosial untuk mengikuti arus.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg retro-border">
+                        <p class="text-dark-text font-medium">Contoh:</p>
+                        <p class="text-dark-text">"<span class="text-brave-pink font-bold">90% masyarakat</span> sudah mendukung program ini. Jangan jadi yang tertinggal!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="py-16 px-4 bg-green-hero retro-border-t retro-border-b">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-12">Cara Menangkal Propaganda</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white retro-card p-6 rounded-lg animate-slide-up">
+                    <div class="w-14 h-14 bg-brave-pink rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-search text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3 text-center">Verifikasi Informasi</h3>
+                    <p class="text-dark-text text-center">Selalu periksa kebenaran informasi dari sumber yang terpercaya sebelum mempercayai atau menyebarkannya.</p>
+                </div>
+                
+                <div class="bg-white retro-card p-6 rounded-lg animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-green-hero rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-brain text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3 text-center">Analisis Kritis</h3>
+                    <p class="text-dark-text text-center">Kembangkan kemampuan berpikir kritis untuk mengenali teknik propaganda yang digunakan.</p>
+                </div>
+                
+                <div class="bg-white retro-card p-6 rounded-lg animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="w-14 h-14 bg-brave-pink rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3 text-center">Edukasi Orang Lain</h3>
+                    <p class="text-dark-text text-center">Bagikan pengetahuan tentang teknik propaganda kepada teman dan keluarga untuk membantu mereka lebih waspada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contoh Section -->
+    <section id="contoh" class="py-16 px-4 bg-retro-bg">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-12">Contoh Konten Media Sosial</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="animate-fade-in">
+                    <div class="retro-border p-4 bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-brave-pink flex items-center justify-center">
+                                <i class="fab fa-instagram text-white"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold">bijakmengawal</p>
+                                <p class="text-sm">Posted 2 hours ago</p>
+                            </div>
+                        </div>
+                        <img src="../assets/images/NameCalling.png" alt="Contoh Instagram" class="aspect-ration-[4/5] retro-border">
+                        <div class="mt-4">
+                            <p class="font-bold">Awas, jangan terjebak Name Calling! 🚫</p>
+                            <p>Teknik propaganda ini memberi label negatif tanpa bukti. Selalu tanyakan: "Apa buktinya?" sebelum mempercayai suatu informasi.</p>
+                            <p class="mt-2 text-sm">#BijakMengawal #LawanPropaganda #NameCalling</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="retro-border p-4 bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-hero flex items-center justify-center">
+                                <i class="fab fa-tiktok text-white"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold">bijakmengawal</p>
+                                <p class="text-sm">Posted 1 day ago</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-200 h-64 flex items-center justify-center retro-border">
+                            <i class="fas fa-play-circle text-4xl text-brave-pink"></i>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-bold">Teknik Bandwagon yang sering beredar! 🎭</p>
+                            <p>Jangan mudah terbawa arus hanya karena "semua orang" melakukannya. Selalu pertimbangkan dengan logika dan hati nurani.</p>
+                            <p class="mt-2 text-sm">#BijakMengawal #Bandwagon #LiterasiMedia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white retro-border-t py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-brave-pink flex items-center">
+                        <i class="fas fa-brain mr-2"></i> BijakMengawal
+                    </a>
+                    <p class="text-dark-text mt-2">Edukasi melawan propaganda untuk masyarakat Indonesia.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-retro-border mt-8 pt-8 text-center text-dark-text">
+                <p>&copy; 2023 BijakMengawal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.retro-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknik Propaganda Umum - Bijak Memantau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brave-pink': '#FF3E6C',
+                        'green-hero': '#2ECC71',
+                        'light-text': '#F8F9FA',
+                        'dark-text': '#333333',
+                        'retro-bg': '#FFF5E0',
+                        'retro-border': '#4A403A'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.7s ease-out',
+                        'bounce-light': 'bounceLight 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        bounceLight: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-10px)' },
+                            '60%': { transform: 'translateY(-5px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF5E0;
+            color: #333333;
+        }
+
+        .retro-border {
+            border: 3px solid #4A403A;
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+
+        .retro-card {
+            border: 2px solid #4A403A;
+            box-shadow: 5px 5px 0px #4A403A;
+            transition: all 0.3s ease;
+        }
+
+        .retro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FF3E6C;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+
+        .animate-bounce-light {
+            animation: bounceLight 2s infinite;
+        }
+
+        .propaganda-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #4A403A;
+            box-shadow: 4px 4px 0px #4A403A;
+        }
+    </style>
+</head>
+
+<body class="bg-retro-bg">
+    <!-- Navbar -->
+    <nav class="bg-white retro-border fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-brave-pink flex items-center">
+                <i class="fas fa-brain mr-2"></i> BijakMengawal
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html" class="nav-link text-dark-text font-medium">Beranda</a>
+                <a href="../index.html#jenis" class="nav-link text-dark-text font-medium">Jenis Propaganda</a>
+                <a href="../index.html#contoh" class="nav-link text-dark-text font-medium">Contoh</a>
+                <a href="../index.html#tips" class="nav-link text-dark-text font-medium">Tips Menangkal</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://bijakmemantau.id/tuntutan-178"
+                    class="bg-brave-pink text-light-text px-4 py-2 rounded retro-border">Tuntutan 178</a>
+                <button class="md:hidden text-dark-text">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Apa Itu Propaganda Section -->
+    <section id="pengantar" class="pt-32 pb-16 px-4 bg-white retro-border-t retro-border-b">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-dark-text mb-6 animate-slide-up">Apa Itu Propaganda?</h2>
+                <p class="text-lg text-dark-text mb-8 animate-fade-in">
+                    Memahami definisi dan tujuan propaganda adalah langkah awal untuk menjadi masyarakat yang kritis dan
+                    bijak.
+                </p>
+            </div>
+
+            <div class="retro-card bg-retro-bg p-6 rounded-lg mb-8 animate-slide-up">
+                <p class="text-dark-text leading-relaxed">
+                    <strong>Propaganda</strong> adalah penyebaran informasi — baik benar, sebagian benar, maupun palsu —
+                    yang dirancang secara sistematis untuk <span class="font-bold text-brave-pink">mempengaruhi opini,
+                        emosi, dan perilaku publik</span>. Tujuannya bukan hanya memberi tahu, tapi <span
+                        class="font-bold">meyakinkan</span> agar orang berpikir atau bertindak sesuai keinginan pihak
+                    yang menyebarkannya.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- Tujuan Propaganda -->
+                <div class="retro-card bg-white p-5 rounded-lg animate-fade-in" style="animation-delay: 0.1s;">
+                    <h3 class="text-xl font-bold text-brave-pink mb-3 flex items-center">
+                        <i class="fas fa-bullhorn mr-2"></i> Tujuan Utama
+                    </h3>
+                    <ul class="text-dark-text list-disc pl-5 space-y-2">
+                        <li>Membentuk atau mengubah opini publik</li>
+                        <li>Menyederhanakan isu kompleks menjadi hitam-putih</li>
+                        <li>Menciptakan dukungan terhadap suatu kelompok atau kebijakan</li>
+                        <li>Menjatuhkan lawan dengan cara tidak langsung</li>
+                    </ul>
+                </div>
+
+                <!-- Ciri-Ciri Propaganda -->
+                <div class="retro-card bg-white p-5 rounded-lg animate-fade-in" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-bold text-green-hero mb-3 flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-2"></i> Ciri-Ciri Umum
+                    </h3>
+                    <ul class="text-dark-text list-disc pl-5 space-y-2">
+                        <li>Bersifat emosional, bukan rasional</li>
+                        <li>Sering menggunakan simplifikasi berlebihan</li>
+                        <li>Memilih-milih fakta (bias)</li>
+                        <li>Menghindari keragaman sudut pandang</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 retro-border p-5 rounded-lg animate-slide-up" style="animation-delay: 0.3s;">
+                <h4 class="font-bold text-dark-text mb-2">Contoh Sederhana:</h4>
+                <p class="text-dark-text">
+                    "Kalau kamu tidak mendukung X, berarti kamu <span class="text-brave-pink font-bold">musuh
+                        rakyat</span>!"
+                    <br><br>
+                    Ini adalah bentuk propaganda karena <strong>menghakimi tanpa diskusi</strong>, memicu rasa takut,
+                    dan memaksa orang memilih sisi tanpa ruang untuk skeptisisme.
+                </p>
+            </div>
+
+            <div class="text-center mt-8">
+                <p class="text-dark-text font-medium">
+                    Propaganda <strong>tidak selalu ilegal</strong>, tapi bisa menjadi berbahaya saat digunakan untuk
+                    menyesatkan, memecah belah, atau mengontrol massa.
+                </p>
+                <p class="text-sm text-gray-600 mt-2">
+                    Kita tidak perlu membencinya — kita hanya perlu <span
+                        class="text-brave-pink font-bold">mengenalinya</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white retro-border-t py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-brave-pink flex items-center">
+                        <i class="fas fa-brain mr-2"></i> BijakMengawal
+                    </a>
+                    <p class="text-dark-text mt-2">Edukasi melawan propaganda untuk masyarakat Indonesia.</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-retro-border mt-8 pt-8 text-center text-dark-text">
+                <p>&copy; 2023 BijakMengawal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.retro-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontra Propaganda - Bijak Memantau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brave-pink': '#FF3E6C',
+                        'green-hero': '#2ECC71',
+                        'light-text': '#F8F9FA',
+                        'dark-text': '#333333',
+                        'retro-bg': '#FFF5E0',
+                        'retro-border': '#4A403A'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.7s ease-out',
+                        'bounce-light': 'bounceLight 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        bounceLight: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-10px)' },
+                            '60%': { transform: 'translateY(-5px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF5E0;
+            color: #333333;
+        }
+        .retro-border {
+            border: 3px solid #4A403A;
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+        .retro-card {
+            border: 2px solid #4A403A;
+            box-shadow: 5px 5px 0px #4A403A;
+            transition: all 0.3s ease;
+        }
+        .retro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #4A403A;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FF3E6C;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+        .animate-bounce-light {
+            animation: bounceLight 2s infinite;
+        }
+        .propaganda-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #4A403A;
+            box-shadow: 4px 4px 0px #4A403A;
+        }
+        .aspect-instagram {
+            aspect-ratio: 9 / 16;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-retro-bg">
+
+    <!-- Navbar -->
+    <nav class="bg-white retro-border fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-brave-pink flex items-center">
+                <i class="fas fa-brain mr-2"></i> BijakMemantau
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html" class="nav-link text-dark-text font-medium">Beranda</a>
+                <a href="../index.html#jenis" class="nav-link text-dark-text font-medium">Jenis Propaganda</a>
+                <a href="../index.html#contoh" class="nav-link text-dark-text font-medium">Contoh</a>
+                <a href="#kontra" class="nav-link text-dark-text font-medium">Kontra Propaganda</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://bijakmemantau.id/tuntutan-178" class="bg-brave-pink text-light-text px-4 py-2 rounded retro-border">Tuntutan 178</a>
+                <button class="md:hidden text-dark-text">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 px-4 bg-green-hero retro-border-b">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark-text mb-6 animate-slide-up">Strategi Kontra Propaganda</h1>
+            <p class="text-lg text-dark-text mb-8 max-w-3xl mx-auto animate-fade-in">
+                Melawan narasi manipulatif dengan fakta, empati, dan kreativitas — bukan kebencian.
+            </p>
+            <div class="animate-bounce-light mt-8">
+                <i class="fas fa-arrow-down text-3xl text-dark-text"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apa Itu Kontra Propaganda? -->
+    <section id="pengantar" class="py-16 px-4 bg-white retro-border-t retro-border-b">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-8 animate-slide-up">Apa Itu Kontra Propaganda?</h2>
+            <div class="retro-card bg-retro-bg p-6 rounded-lg mb-8">
+                <p class="text-dark-text leading-relaxed">
+                    <strong>Kontra propaganda</strong> bukan tentang membalas kebencian dengan kebencian, melainkan <span class="font-bold text-brave-pink">mengungkap manipulasi</span>, <span class="text-green-hero font-bold">menawarkan narasi alternatif</span>, dan <span class="font-bold">memberdayakan masyarakat</span> untuk berpikir kritis.
+                </p>
+                <p class="text-dark-text mt-4">
+                    Dalam konteks isu seperti "17+8", kontra-propaganda berarti:
+                </p>
+                <ul class="list-disc pl-5 mt-2 text-dark-text space-y-1">
+                    <li>Menjelaskan konteks sejarah dan hukum secara akurat</li>
+                    <li>Menghindari generalisasi atau stigma terhadap kelompok tertentu</li>
+                    <li>Menyebarkan pesan damai, persatuan, dan tanggung jawab sosial</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategi Kontra Propaganda -->
+    <section id="kontra" class="py-16 px-4 bg-retro-bg">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-12">Strategi Efektif Kontra Propaganda</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Strategi 1 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in">
+                    <div class="w-12 h-12 bg-brave-pink rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">1. Edukasi, Bukan Emosi</h3>
+                    <p class="text-dark-text mb-4">
+                        Ganti narasi emosional dengan konten edukatif: infografis, video singkat, atau thread Twitter yang menjelaskan fakta hukum, sejarah, dan dampak sosial dari suatu isu.
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        🎯 Contoh: "Apa arti '17+8' secara hukum? Simak penjelasan dari ahli hukum tata negara."
+                    </p>
+                </div>
+
+                <!-- Strategi 2 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.1s">
+                    <div class="w-12 h-12 bg-green-hero rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">2. Bangun Narasi Alternatif</h3>
+                    <p class="text-dark-text mb-4">
+                        Ciptakan narasi positif: persatuan, keadilan, dan kepedulian sosial. Gunakan tokoh masyarakat, seniman, atau influencer untuk menyebarkan pesan damai.
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        🎯 Contoh: "Mari fokus pada solusi, bukan perpecahan. Kita semua ingin Indonesia yang adil dan damai."
+                    </p>
+                </div>
+
+                <!-- Strategi 3 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.2s">
+                    <div class="w-12 h-12 bg-brave-pink rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">3. Lawan Teknik Propaganda</h3>
+                    <p class="text-dark-text mb-4">
+                        Identifikasi teknik seperti <em>name calling</em>, <em>bandwagon</em>, atau <em>glittering generality</em>, lalu bongkar dengan logika dan data.
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        🎯 Contoh: "Jangan sebarkan label 'musuh rakyat' tanpa bukti. Itu adalah teknik Name Calling."
+                    </p>
+                </div>
+
+                <!-- Strategi 4 -->
+                <div class="retro-card bg-white p-6 rounded-lg animate-fade-in" style="animation-delay: 0.3s">
+                    <div class="w-12 h-12 bg-green-hero rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bullhorn text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-text mb-3">4. Gunakan Media Sosial Secara Cerdas</h3>
+                    <p class="text-dark-text mb-4">
+                        Buat konten yang mudah dibagikan: Reels, TikTok, carousel Instagram, atau meme edukatif yang menyampaikan pesan kritis tanpa menyudutkan.
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        🎯 Contoh: Video 30 detik: "3 Cara Mengenali Propaganda di Medsos".
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contoh Konten Kontra Propaganda -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dark-text mb-12">Contoh Konten Kontra Propaganda</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Instagram Carousel -->
+                <div class="bg-white retro-card p-4 rounded-lg animate-slide-up">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-brave-pink rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram text-white text-sm"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-text ml-2">Instagram Post</h3>
+                    </div>
+                    <div class="aspect-instagram bg-cover bg-center retro-border mb-3" style="background-image: url('https://placehold.co/300x533/2ECC71/FFFFFF?text=Stop+Stigma')"></div>
+                    <p class="text-dark-text text-sm">"Jangan sebarkan kebencian. Mari kita lawan propaganda dengan empati dan fakta."</p>
+                    <p class="text-xs text-gray-500 mt-2">#BijakMemantau #StopPropaganda #SatukanBangsa</p>
+                </div>
+
+                <!-- TikTok -->
+                <div class="bg-white retro-card p-4 rounded-lg animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                            <i class="fab fa-tiktok text-white text-sm"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-text ml-2">TikTok</h3>
+                    </div>
+                    <div class="aspect-instagram bg-gray-200 flex items-center justify-center retro-border mb-3">
+                        <i class="fas fa-play-circle text-3xl text-brave-pink"></i>
+                    </div>
+                    <p class="text-dark-text text-sm">"Kamu sering dengar '17+8'? Simak fakta hukumnya dalam 60 detik!"</p>
+                </div>
+
+                <!-- Reels -->
+                <div class="bg-white retro-card p-4 rounded-lg animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                            <i class="fas fa-film text-white text-sm"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-text ml-2">Reels</h3>
+                    </div>
+                    <div class="aspect-instagram bg-cover bg-center retro-border mb-3" style="background-image: url('https://placehold.co/300x533/FF3E6C/FFFFFF?text=3+Tanda+Propaganda')"></div>
+                    <p class="text-dark-text text-sm">"3 tanda konten medsos sedang memanipulasi kamu. Kenali sebelum share!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 bg-green-hero retro-border-t retro-border-b">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="text-3xl font-bold text-dark-text mb-6">Jadilah Garda Terdepan Melawan Propaganda</h2>
+            <p class="text-dark-text mb-8">
+                Bagikan pengetahuan ini. Edukasi teman dan keluarga. Lawan kebencian dengan kebenaran.
+            </p>
+            <a href="https://bijakmemantau.id/tuntutan-178" class="bg-brave-pink text-light-text px-8 py-3 rounded-full retro-border font-bold hover:shadow-lg transition">
+                Dukung Literasi Media
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white retro-border-t py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="../index.html" class="text-2xl font-bold text-brave-pink flex items-center">
+                        <i class="fas fa-brain mr-2"></i> BijakMemantau
+                    </a>
+                    <p class="text-dark-text mt-2">Edukasi melawan propaganda untuk masyarakat Indonesia.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon text-dark-text text-xl hover:text-brave-pink">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-retro-border mt-8 pt-8 text-center text-dark-text">
+                <p>&copy; 2023 BijakMemantau. Semua konten untuk tujuan edukasi dan literasi media.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
